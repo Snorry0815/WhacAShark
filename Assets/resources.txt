@@ -1,0 +1,36 @@
+
+File: brushwalker437.png, brushwalker218.png, brushwalker137.png
+Description:  water texture
+Source: http://opengameart.org/content/3-live-proceduraly-generated-tiling-water-textures-512px-running-brushes
+Author: qubodup
+
+File: shark.blend
+Description:  shark model
+Source: http://opengameart.org/content/low-poly-shark
+Author: pennomi
+
+File: Shark.7z 
+Description:  shark model
+source: http://opengameart.org/content/shark-low-poly
+Author: Phelippeau Rudy
+
+File: rope_fence.zip 
+Description:  rope fence
+Source: http://opengameart.org/content/rope-fence
+Author: Clint Bellanger
+
+File: Caustics.zip 
+Description:  water caustics
+Source: http://opengameart.org/content/water-caustics-effect-small
+Author: leeor_net
+
+
+File: Simple Buoy 
+Description: Buoy
+Source: https://www.assetstore.unity3d.com/#/content/4734
+Author: Christopher Wrightson
+
+File: melee_weapons.blend 
+Description: tools
+Source: http://opengameart.org/content/various-melee-weapons
+Author: Tabasco
