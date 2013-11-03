@@ -34,3 +34,8 @@ File: melee_weapons.blend
 Description: tools
 Source: http://opengameart.org/content/various-melee-weapons
 Author: Tabasco
+
+File: Pingouin.7z
+Description: pinguin
+Source: http://opengameart.org/content/turtle-low-poly
+Author: STKRudy85
