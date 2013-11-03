@@ -19,11 +19,35 @@ public static class GameDirector {
 		}
 	}
 	
-	public delegate void MalletHitEvent(float x,float y);
+	public delegate void MalletHitEvent(float x,float y, int coordX, int coordY);
 	public static event MalletHitEvent MalletHit;
-	public static void TriggerMalletHit(float x, float y) {
+	public static void TriggerMalletHit(float x, float y, int coordX, int coordY) {
 		if(MalletHit != null) {
-			MalletHit(x, y);
+			MalletHit(x, y, coordX, coordY);
+		}
+	}
+	
+	public delegate void EscapeEvent(int x,int y, GameObject escapy);
+	public static event EscapeEvent Escape;
+	public static void TriggerEscape(int x, int y,GameObject escapy) {
+		if(Escape != null) {
+			Escape(x, y, escapy);
+		}
+	}
+	
+	public delegate void WhacEvent(int x,int y);
+	public static event WhacEvent Whac;
+	public static void TriggerWhac(int x, int y) {
+		if(Whac != null) {
+			Whac(x, y);
+		}
+	}
+	
+	public delegate void WhacObjectEvent(int x,int y, GameObject whacedObject);
+	public static event WhacObjectEvent WhacObject;
+	public static void TriggerWhacObject(int x, int y, GameObject whacedObject) {
+		if(WhacObject != null) {
+			WhacObject(x, y, whacedObject);
 		}
 	}
 }

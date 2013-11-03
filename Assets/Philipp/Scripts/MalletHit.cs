@@ -15,6 +15,9 @@ public class MalletHit : MonoBehaviour {
 	private float x;
 	private float y;
 	
+	private int coordX;
+	private int coordY;
+	
 	private AnimState animState = AnimState.IDLE;
 	private Animation animationInt;
 	
@@ -25,7 +28,7 @@ public class MalletHit : MonoBehaviour {
 		this.animationInt = this.gameObject.GetComponentInChildren<Animation>();
 	}
 
-	public void  Hit(float x, float y)
+	public void  Hit(float x, float y, int coordX, int coordY)
 	{
 		if(animState == AnimState.IDLE)
 		{
@@ -35,6 +38,8 @@ public class MalletHit : MonoBehaviour {
 			this.animState = AnimState.MOVEDOWN;
 			this.x = x;
 			this.y = y;
+			this.coordX = coordX;
+			this.coordY = coordY;
 		}
 	}
 	
@@ -46,10 +51,12 @@ public class MalletHit : MonoBehaviour {
 			{
 			case AnimState.MOVEDOWN:
 				this.animState = AnimState.MOVEUP;
+				this.animationInt["hit"].time = this.animationInt["hit"].length;
 				this.animationInt["hit"].speed = -1;
 				this.animationInt.Play();
 				Wave wave = new CircularWave(x,y,1.5f);
 				GameDirector.TriggerWave(wave);
+				GameDirector.TriggerWhac(this.coordX, this.coordY);
 				break;
 			case AnimState.MOVEUP:	
 				this.animState = AnimState.IDLE;
@@ -60,6 +67,5 @@ public class MalletHit : MonoBehaviour {
 				break;
 			}
 		}
-	
 	}
 }
