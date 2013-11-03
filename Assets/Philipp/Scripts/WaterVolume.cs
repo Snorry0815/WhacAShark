@@ -23,6 +23,8 @@ public class WaterVolume : MonoBehaviour {
 				heightMap[x,y] = 1f;
 			}
 		}
+		
+		GameDirector.Wave += AddWave;
 	}
 	
 	public float getHeight(int x, int y)
@@ -54,7 +56,7 @@ public class WaterVolume : MonoBehaviour {
 		
 		return h1234;
 	}
-	
+
 	public void AddWave(Wave wave)
 	{
 		this.waves.Add(wave);
